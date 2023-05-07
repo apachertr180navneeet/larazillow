@@ -10,14 +10,14 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 import { Link, usePage } from '@inertiajs/inertia-vue3'
 // import { ref } from 'vue'
 
 // page.props.value.flash.success
-const page = usePage();
+const page = usePage()
 const flashSuccess = computed(
-  () => page.props.value.flash.success
+  () => page.props.value.flash.success,
 )
 // const timer = ref(0)
 // setInterval(() => timer.value++, 1000)
