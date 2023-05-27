@@ -72,31 +72,39 @@
   </form>
 </template>
 
+
 <script setup>
+
 import { useForm } from '@inertiajs/inertia-vue3'
 
+
 const props = defineProps({
-  listing: Object,
+  listing:Object,
 })
-const form = useForm({
+
+const form =  useForm({
   beds: props.listing.beds,
   baths: props.listing.baths,
   area: props.listing.area,
   city: props.listing.city,
-  street: props.listing.street,
-  code: props.listing.code,
+  code: props.listing.street,
+  street: props.listing.code,
   street_nr: props.listing.street_nr,
   price: props.listing.price,
 })
+
 const update = () => form.put(route('listing.update', {listing: props.listing.id}))
+
 </script>
 
-<style scoped>
-label {
-  margin-right: 2em;
-}
 
-div {
-  padding: 2px
-}
+<style scoped>
+	label{
+		margin-right: 2em;
+	}
+
+
+	div{
+		padding: 2px;
+	}
 </style>
